@@ -15,8 +15,8 @@ let noun = ["jogger", "racoon"];
 let adress = [".com", ".net", ".us", ".io"];
 function myFun(n1, n2, n3, n4) {
   n1.forEach(element => {
-    for (element2 of n2) {
-      for (element3 in n3) {
+    for (let element2 in n2) {
+      for (let element3 in n3) {
         n4.forEach(el => {
           console.log(
             `${element}${element2}`.concat(noun[element3]).concat(el)
@@ -26,4 +26,4 @@ function myFun(n1, n2, n3, n4) {
     }
   });
 }
-console.log(myFun(pronoun, adj, noun, adress));
+myFun(pronoun, adj, noun, adress);
